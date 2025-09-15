@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>YT Downloader</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        margin: 24px;
+      }
+      label,
+      input,
+      button {
+        font-size: 16px;
+      }
+      .log {
+        white-space: pre-wrap;
+        background: #f6f6f6;
+        padding: 12px;
+        border-radius: 8px;
+        height: 260px;
+        overflow: auto;
+      }
+      .row {
+        margin-bottom: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>YouTube İndirici</h2>
+    <div class="row">
+      <label>Video URL: </label>
+      <input
+        id="url"
+        style="width: 520px"
+        placeholder="https://www.youtube.com/watch?v=..."
+      />
+    </div>
+    <div class="row">
+      <label>Maks. Yükseklik: </label>
+      <input id="height" type="number" value="720" min="144" max="1080" />
+      <button id="btn">İndir</button>
+    </div>
+    <div class="row">
+      <div class="log" id="log"></div>
+    </div>
+    <script src="./renderer.js"></script>
+  </body>
+</html>
