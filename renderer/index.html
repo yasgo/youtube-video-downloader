@@ -10,7 +10,8 @@
       }
       label,
       input,
-      button {
+      button,
+      textarea {
         font-size: 16px;
       }
       .log {
@@ -28,22 +29,27 @@
   </head>
   <body>
     <h2>YouTube İndirici</h2>
+
     <div class="row">
-      <label>Video URL: </label>
-      <input
-        id="url"
+      <label>Video URL veya URL listesi:</label><br />
+      <textarea
+        id="urls"
+        rows="5"
         style="width: 520px"
-        placeholder="https://www.youtube.com/watch?v=..."
-      />
+        placeholder="https://www.youtube.com/watch?v=...\nhttps://www.youtube.com/watch?v=..."
+      ></textarea>
     </div>
+
     <div class="row">
       <label>Maks. Yükseklik: </label>
       <input id="height" type="number" value="720" min="144" max="1080" />
       <button id="btn">İndir</button>
     </div>
+
     <div class="row">
       <div class="log" id="log"></div>
     </div>
+
     <script src="./renderer.js"></script>
   </body>
 </html>
